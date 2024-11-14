@@ -1,0 +1,456 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Protest+Guerrilla&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styles */
+html, body {
+    height: 100%;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #e9e9e9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: "Protest Guerrilla", sans-serif;
+    margin-bottom: 0.5em;
+}
+
+.josefin-sans, .nav a, .sec1 p, .container, .info, .foot {
+    font-family: "Josefin Sans", sans-serif;
+}
+
+/* Layout */
+header {
+    background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-size: 15px;
+    margin-bottom: -30px;
+}
+
+.nav a {
+    color: black;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    color: rgb(34, 0, 255);
+}
+
+.content {
+    background-color: white;
+    border: 0.1px solid #ababab;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    flex: 1;
+}
+
+.album {  
+    margin-top: 20px;
+    display: flex;
+    overflow: hidden;
+}
+
+.main, .sub {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subs {
+    display: grid;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.profile {
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.foot {
+    text-align: center;
+    background-color: #14181d;
+    color: #ffffff;
+    padding: 20px;
+    margin-top: auto;
+}
+
+/* Small Mobile styles */
+@media (min-width: 360px) and (max-width: 539px) {
+    body {
+        background-color: white;
+    }
+
+    .content {
+        width: 100%;
+        margin: 0;
+        border: none;
+    }
+
+    header {
+        background-color: #e9e9e9;
+        padding: 12px;
+        border-bottom: 1px solid black;
+    }
+
+    #logo {
+        width: 80px;
+        margin: 12px 0;
+    }
+
+    .nav {
+        gap: 50px;
+        margin-bottom: -12px;
+    }
+
+    h1 { font-size: 60px; }
+    h2 { font-size: 34px; }
+    h3 { font-size: 34px; }
+
+    h1, h2, h3 {
+        text-align: center;
+        margin-bottom: 12px;
+    }
+
+    .sec1 {
+        padding: 12px;
+        margin: 12px;
+    }
+
+    .sec1 p {
+        font-size: 16px;
+        max-width: 100%;
+        line-height: 1.4;
+    }
+
+    .container {
+        column-count: 1;
+        padding: 12px;
+    }
+
+    .album {
+        flex-direction: column;
+    }
+
+    .main img, .sub img {
+        width: 100%;
+        height: auto;
+    }
+
+    .subs {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .author {
+        flex-direction: column;
+        width: 100%;
+        padding: 12px 0;
+    }
+
+    .info {
+        padding: 12px;
+    }
+
+    .profile {
+        order: -1;
+        width: 200px;
+        height: 200px;
+        margin-bottom: 12px;
+    }
+
+    .foot {
+        padding: 12px;
+    }
+}
+
+/* Large Mobile styles */
+@media (min-width: 540px) and (max-width: 719px) {
+    body {
+        background-color: white; 
+    }
+
+    .content {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+
+    header {
+        background-color: #e9e9e9; 
+        padding: 20px; 
+        border-bottom: 1px solid black;
+    }
+
+    #logo {
+        width: 80px;
+    }
+
+    .nav {
+        gap: 90px;
+    }
+
+    h1 { font-size: 72px; }
+    h2 { font-size: 50px; }
+    h3 { font-size: 50px; }
+
+    h1, h2, h3 {
+        text-align: center;
+    }
+
+    .sec1 {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .sec1 p {
+        font-size: 18px;
+        max-width: 100%;
+    }
+
+    .container {
+        column-count: 1;
+        padding: 20px;
+    }
+
+    .album {
+        flex-direction: column;
+    }
+
+    .main img, .sub img {
+        width: 100%;
+        height: auto;
+    }
+
+    .subs {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .author {
+        flex-direction: column;
+        width: 95%;
+        padding: 20px 0;
+    }
+
+    .profile {
+        order: -1;
+        width: 200px;
+        height: 200px;
+        flex-shrink: 0;
+    }
+
+    .sec2, .sec3, .sec4 p{
+        font-size: 20px;
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 720px) and (max-width: 1024px) {
+    .content {
+        width: 90%;
+        margin: 30px auto;
+    }
+
+    #logo {
+        width: 80px;
+    }
+
+    .nav {
+        gap: 100px;
+    }
+
+    h1 { font-size: 90px; }
+    h2 { font-size: 40px; }
+    h3 { font-size: 40px; }
+
+    h1, h2, h3 {
+        text-align: center;
+    }
+
+    .sec1 p {
+        font-size: 18px;
+        max-width: 100%;
+        margin: 30px;
+    }
+
+    .container {
+        column-count: 0;
+        column-gap: 30px;
+        padding: 30px;
+    }
+
+    .album {
+        flex-direction: column;
+    }
+
+    .main img, .sub img {
+        width: 100%;
+        height: auto;
+        max-width: 560px;
+        display: block;
+    }
+
+    .subs {
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        margin-top: 30px;
+    }
+
+    .tablet-hide {
+        display: none;
+    }
+
+    .author {
+        flex-direction: row;
+        width: 90%;
+        padding: 30px;
+        margin: 0 auto;
+    }
+
+    .ainfo {
+        margin: 0 20px 0 0;
+        padding: 0;
+    }
+
+    .profile {
+        width: 200px;
+        height: 200px;
+        flex-shrink: 0;
+    }
+
+    .foot {
+        width: 100%;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 1025px) {
+    #logo {
+        width: 200px;
+    }
+
+    .content {
+        width: 60%;
+        margin: 40px auto 0;
+    }
+
+    .nav {
+        gap: 300px;
+    }
+
+    h1 { font-size: 135px; margin-bottom: -10px; }
+    h2 { font-size: 45px; }
+    h3 { font-size: 36px; margin-top: 10px; margin-bottom: 10px; }
+
+    h1, h2, h3 {
+        text-align: left;
+    }
+
+    .sec1 {
+        padding: 30px;
+        margin-bottom: -50px;
+    }
+
+    .sec1 p {
+        font-size: 24px;
+        max-width: 750px;
+    }
+
+    .container {
+        column-count: 3;
+        column-gap: 20px;
+        padding: 30px;
+    }
+
+    .subs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        grid-template-rows: auto auto;  
+    }
+
+    .sub {
+        margin: 0;
+        padding: 0;
+        line-height: 0; 
+    }
+
+    .sub img {
+        display: block;
+        width: 100%;
+        height: 100%; 
+        object-fit: cover; 
+    }
+
+    .tablet-hide {
+        display: block;
+    }
+
+    .author {
+        padding: 30px;
+        width: 76%;
+    }
+
+    .ainfo {
+        flex: 1;
+        margin-top: -35px;
+        margin-right: 20px;
+        margin-left: -70px;
+    }
+
+    .profile {
+        width: 200px;
+        height: 200px;
+    }
+}
